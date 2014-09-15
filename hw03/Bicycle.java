@@ -19,7 +19,6 @@ public class Bicycle {
     //main method required for every java program
     public static void main(String[] args)  {
         //input data and create variables
-        Scanner myScanner; //declare Scanner as variable
         //call scanner constructor
         Scanner input = new Scanner(System.in);   //create instance of scanner class
         
