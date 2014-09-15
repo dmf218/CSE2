@@ -34,10 +34,11 @@ public class Bicycle {
         System.out.print("Enter the number of counts(an integer>0): "); //prompt the user to enter the number of counts
         int nCounts = input.nextInt();    //accept user input for total number of counts
         
-        double totalDistance=(int)(((nCounts*wheelDiameter*PI)/(inchesPerFoot*feetPerMile))*100)/100.0;    //calculate total distance traveled from information given
+        double totalDistance=(int)(((nCounts*wheelDiameter*PI)/(inchesPerFoot*feetPerMile))*100)/100.0; //calculate total distance traveled from information given
+        double totalDistance1=(nCounts*wheelDiameter*PI)/(inchesPerFoot*feetPerMile);   //calculate total distance unaffected by int
         double totalTimeMinutes=nSeconds/secondsPerMinute; //calculate total time in minutes
-        double totalTimeHours=totalTimeMinutes/minutesPerHour;  //calculate total time in hours
-        double avgMPH=(int)((totalDistance/totalTimeHours)*100)/100.0; //calculate average miles per hour
+        double totalTimeHours=(totalTimeMinutes/minutesPerHour);  //calculate total time in hours
+        double avgMPH=(int)((totalDistance1/totalTimeHours)*100)/100.00; //calculate average miles per hour
         
         System.out.println("The total distance traveled was "+(totalDistance)+" miles and took "+totalTimeMinutes+" minutes."); //print out statement
         System.out.println("The average mph was "+avgMPH+".");  //print out average mph
