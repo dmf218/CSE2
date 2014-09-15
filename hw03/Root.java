@@ -23,16 +23,16 @@ public class Root {
         Scanner input=new Scanner(System.in);   //create instance of scanner class
         
         System.out.print("Enter value of a double: ");  //prompt user to input a double
-        int x= input.nextInt(); //accept user input for number
+        double x= input.nextDouble(); //accept user input for number
         double guess1=x/3;  //guess square root
-        double resultGuess1=(guess1*guess1*guess1+x)/(3*guess1*guess1);   //crude guess when cubed
+        double resultGuess1=(2*guess1*guess1*guess1+x)/(3*guess1*guess1);   //crude guess when cubed
         double resultGuess2=(2*resultGuess1*resultGuess1*resultGuess1+x)/(3*resultGuess1*resultGuess1);   //crude guess when result is cubed
         double resultGuess3=(2*resultGuess2*resultGuess2*resultGuess2+x)/(3*resultGuess2*resultGuess2);   //crude guess when cubed
         double resultGuess4=(2*resultGuess3*resultGuess3*resultGuess3+x)/(3*resultGuess3*resultGuess3);   //continue to guess the cubed answer
         double resultGuess5=(2*resultGuess4*resultGuess4*resultGuess4+x)/(3*resultGuess4*resultGuess4);   //closer guess to real cubed
         
         System.out.println("The cube root is "+resultGuess5+".");   //print estimate answer of cube root
-        System.out.println("The value when cubed is "+(resultGuess5*resultGuess5*resultGuess5)+".");    //print out estimate of cube root cubed
+        System.out.println("The value cubed is "+resultGuess5+"*"+resultGuess5+"*"+resultGuess5+"="+(resultGuess5*resultGuess5*resultGuess5)+".");    //print out estimate of cube root cubed
     }
 }
 
