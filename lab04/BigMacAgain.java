@@ -51,17 +51,17 @@ public class BigMacAgain {
             String fries=myScanner.next();
             if (fries.equals("Y") || fries.equals("y")) {       //if input is Y or y
                 System.out.println("You ordered fries at a cost of $2.15.");    //print confirmation that they ordered fries
-                System.out.println("The total cost of the meal is "+(Math.round((nBigMacs*bigMac$)+fries$)));   //print total cost if ordered fries
+                System.out.println("The total cost of the meal is "+((cost$)+fries$)));   //print total cost if ordered fries
             }
             if (fries.equals("n") || fries.equals("N")) {       //if the input is N or n
                 System.out.println("The total cost of the meal is "+dollars+"."+dimes+pennies);     //print total cost of meal if did not order fries
             }
-            else    {
+        }
+        else    {
                 System.out.println("Error. Did not enter appropriate variable.");   //print statement if any other variable is entered
                 System.out.println("The total cost of the meal is "+dollars+"."+dimes+pennies); //print total cost of meal
                 return; //terminates the program
             }
-        }   //end of if statement
 
         }   //end of main method
     }   //end of class
