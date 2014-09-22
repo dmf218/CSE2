@@ -36,22 +36,22 @@ public class IncomeTax  {
                 if (income>=0 && income<=20)    {
                     taxRate=.05;    //set tax rate for income less than 20,000 (20)
                     incomeTax=((income*taxRate)*1000);  //calculate income tax paid in dollars
-                    System.out.println("The tax rate on $"+income+",000 is "+(taxRate*100)+"%, and the tax is $"+incomeTax);   //print income, tax rate, and income tax
+                    System.out.println("The tax rate on $"+income+",000 is 5.0%, and the tax is $"+incomeTax);   //print income, tax rate, and income tax
                 }
                 if (income>20 && income<=40)    {   //if income is between 20 and 40
                     taxRate=.07;    //set tax rate for specified conditions
-                    incomeTax=Math.round((income*taxRate)*1000);  //calculate income tax
-                    System.out.println("The tax rate on $"+income+",000 is "+(taxRate*100)+"%, and the tax is $"+incomeTax);   //print income,tax rate, and income tax
+                    incomeTax=((income*taxRate)*1000);  //calculate income tax
+                    System.out.println("The tax rate on $"+income+",000 is 7.0%, and the tax is $"+incomeTax);   //print income,tax rate, and income tax
                 }
                 if (income>40 && income<=78)  {   //if income is greater than 40 and less than 78
                     taxRate=.12;    //set tax rate for specified conditions
                     incomeTax=((income*taxRate)*1000);  //calculate income tax
-                    System.out.println("The tax rate on $"+income+",000 is "+(taxRate*100)+"%, and the tax is $"+incomeTax);   //print income, tax rate, and income tax)
+                    System.out.println("The tax rate on $"+income+",000 is 12.0%, and the tax is $"+incomeTax);   //print income, tax rate, and income tax)
                 }
                 if (income>78)  {   //if income is greater than 78
                     taxRate=.14;    //set tax rate
                     incomeTax=((income*taxRate)*1000);  //calculate income tax
-                    System.out.println("The tax rate on $"+income+",000 is "+(Math.round((taxRate*100)))+"%, and the tax is $"+incomeTax);
+                    System.out.println("The tax rate on $"+income+",000 is 14.0%, and the tax is $"+incomeTax);
                 }
                 return; //terminate program
         }
