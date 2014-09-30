@@ -58,6 +58,9 @@ public class BoolaBoola {
                         case "f":   //same as F
                             System.out.println("Wrong. Try again.");    //print when guessed wrong
                             break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
+                            break;
                     }
                     return;
                 }
@@ -74,6 +77,9 @@ public class BoolaBoola {
                             break;
                         case "f":   //same conditons as F
                             System.out.println("Correct."); //print if correct
+                            break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
                             break;
                     }
                 return;
@@ -109,6 +115,9 @@ public class BoolaBoola {
                         case "f":   //same as F
                             System.out.println("Wrong. Try again.");    //print when guessed wrong
                             break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
+                            break;
                     }
                     return;
                 }
@@ -125,6 +134,9 @@ public class BoolaBoola {
                             break;
                         case "f":   //same conditons as F
                             System.out.println("Correct."); //print if correct
+                            break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
                             break;
                     }
                 return;
@@ -158,6 +170,9 @@ public class BoolaBoola {
                         case "f":   //same as F
                             System.out.println("Wrong. Try again.");    //print when guessed wrong
                             break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
+                            break;
                     }
                     return;
                 }
@@ -174,6 +189,9 @@ public class BoolaBoola {
                             break;
                         case "f":   //same conditons as F
                             System.out.println("Correct."); //print if correct
+                            break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
                             break;
                     }
                 return;
@@ -210,6 +228,9 @@ public class BoolaBoola {
                         case "f":   //same as F
                             System.out.println("Wrong. Try again.");    //print when guessed wrong
                             break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
+                            break;
                     }
                     return;
                 }
@@ -226,6 +247,9 @@ public class BoolaBoola {
                             break;
                         case "f":   //same conditons as F
                             System.out.println("Correct."); //print if correct
+                            break;
+                        default:    //anything else
+                            System.out.println("Wrong. Try again.");
                             break;
                     }
                 return;
