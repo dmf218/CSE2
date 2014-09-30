@@ -36,12 +36,14 @@ public class BoolaBoola {
             boolean value1= (var1 && var2 && var3);  //true/false values 
             
             System.out.print("Does "+var1+" && "+var2+" && "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
-            if (myScanner.hasNext())    {
+            if (myScanner.hasNext())   
+         {
                 result=myScanner.next();    //accept user input
-                if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
+             /*   if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
                     System.out.println("Wrong. Try Again."); //print if anything else is entered
                     return;  //terminate program
-                }
+                } */
+                
                 if (value1==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
@@ -59,7 +61,7 @@ public class BoolaBoola {
                     }
                     return;
                 }
-                if (value1==false)  {   //if the result of the value1 statement is determined to be false
+                else if (value1==false)  {   //if the result of the value1 statement is determined to be false
                     switch (result) {
                         case "T":   //this guess is actually incorrect since statement is false
                             System.out.println("Wrong. Try Again.");    //print statement if guessed incorrectly
@@ -76,21 +78,23 @@ public class BoolaBoola {
                     }
                 return;
                 }
+                   
         
         }
             
         }   //end of first &&/|| possibility
         
-        if (andOrVar1==1 && andOrVar2==2)   {   //&& then ||
+        else if (andOrVar1==1 && andOrVar2==2)  {   //&& then ||
             boolean value2=(var1 && var2 || var3);  //second combination of && and ||
             
             System.out.print("Does "+var1+" && "+var2+" || "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
-            if (myScanner.hasNext())    {
+           if (myScanner.hasNext())   {
                 result=myScanner.next();    //accept user input
-                if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
+             /*   if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
                     System.out.println("Wrong. Try Again."); //print if anything else is entered
                     return;  //terminate program
-                }
+                } */
+                
                 if (value2==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
@@ -108,7 +112,7 @@ public class BoolaBoola {
                     }
                     return;
                 }
-                if (value2==false)  {   //if the result of the value1 statement is determined to be false
+                else if (value2==false)  {   //if the result of the value1 statement is determined to be false
                     switch (result) {
                         case "T":   //this guess is actually incorrect since statement is false
                             System.out.println("Wrong. Try Again.");    //print statement if guessed incorrectly
@@ -127,20 +131,20 @@ public class BoolaBoola {
                 }
             return;
             }
-           
+                
         }
         
-        if (andOrVar1==2 && andOrVar2==1)   {   //when || then &&
+        else if (andOrVar1==2 && andOrVar2==1)   {   //when || then &&
             boolean value3=(var1 || var2 && var3);  //third combination of &&s and ||s
             
             System.out.print("Does "+var1+" || "+var2+" && "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
             if (myScanner.hasNext())    {
                 result=myScanner.next();    //accept user input
-                if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
+               /* if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
                     System.out.println("Wrong. Try Again."); //print if anything else is entered
                     return;  //terminate program
-                }
-                if (value3==true)  {    //if the result of the value1 staement is determined to be true
+                } */
+                 if (value3==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
                             System.out.println("Correct."); //print affirmation of correct answer
@@ -157,7 +161,7 @@ public class BoolaBoola {
                     }
                     return;
                 }
-                if (value3==false)  {   //if the result of the value1 statement is determined to be false
+                else if (value3==false)  {   //if the result of the value1 statement is determined to be false
                     switch (result) {
                         case "T":   //this guess is actually incorrect since statement is false
                             System.out.println("Wrong. Try Again.");    //print statement if guessed incorrectly
@@ -174,21 +178,24 @@ public class BoolaBoola {
                     }
                 return;
                 }
+                   
             return;
             }
             
         }
         
-        if (andOrVar1==2 && andOrVar2==2)    {   //the conition in which || and ||
+        else if (andOrVar1==2 && andOrVar2==2)    {   //the conition in which || and ||
             boolean value4=(var1 || var2 || var3);  //fourth combination of && and ||
             
             System.out.print("Does "+var1+" || "+var2+" || "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
             if (myScanner.hasNext())    {
                 result=myScanner.next();    //accept user input
-                if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
+               /* if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
                     System.out.println("Wrong. Try Again."); //print if anything else is entered
                     return;  //terminate program
-                }
+                }*/
+                
+                
                 if (value4==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
@@ -206,7 +213,7 @@ public class BoolaBoola {
                     }
                     return;
                 }
-                if (value4==false)  {   //if the result of the value1 statement is determined to be false
+                else if (value4==false)  {   //if the result of the value1 statement is determined to be false
                     switch (result) {
                         case "T":   //this guess is actually incorrect since statement is false
                             System.out.println("Wrong. Try Again.");    //print statement if guessed incorrectly
@@ -225,8 +232,7 @@ public class BoolaBoola {
                 }
             return;
             }
-           
-        }
+        } 
         
         
     }   //end of main method
