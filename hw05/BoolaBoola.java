@@ -39,11 +39,7 @@ public class BoolaBoola {
             if (myScanner.hasNext())   
          {
                 result=myScanner.next();    //accept user input
-             /*   if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
-                    System.out.println("Wrong. Try Again."); //print if anything else is entered
-                    return;  //terminate program
-                } */
-                
+             
                 if (value1==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
@@ -96,10 +92,7 @@ public class BoolaBoola {
             System.out.print("Does "+var1+" && "+var2+" || "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
            if (myScanner.hasNext())   {
                 result=myScanner.next();    //accept user input
-             /*   if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
-                    System.out.println("Wrong. Try Again."); //print if anything else is entered
-                    return;  //terminate program
-                } */
+           
                 
                 if (value2==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
@@ -152,10 +145,7 @@ public class BoolaBoola {
             System.out.print("Does "+var1+" || "+var2+" && "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
             if (myScanner.hasNext())    {
                 result=myScanner.next();    //accept user input
-               /* if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
-                    System.out.println("Wrong. Try Again."); //print if anything else is entered
-                    return;  //terminate program
-                } */
+               
                  if (value3==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
@@ -208,12 +198,7 @@ public class BoolaBoola {
             System.out.print("Does "+var1+" || "+var2+" || "+var3+" have the value true(T/t) or false(F/f)?");  //prompt the user to input their guess of true or false
             if (myScanner.hasNext())    {
                 result=myScanner.next();    //accept user input
-               /* if ( !(result.equals("T")) || !result.equals("t") || !result.equals("f") || !result.equals("F")) {
-                    System.out.println("Wrong. Try Again."); //print if anything else is entered
-                    return;  //terminate program
-                }*/
-                
-                
+           
                 if (value4==true)  {    //if the result of the value1 staement is determined to be true
                     switch (result) {
                         case "T":   //when statement is true and user in put is true-overall correct
