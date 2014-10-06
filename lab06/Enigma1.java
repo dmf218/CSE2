@@ -56,6 +56,7 @@ public class Enigma1{
 /* Error report: 
  *    (Exlain the error(s) that occur here, in this comment,
  *    and fix the errors)
+            only works for specific cases 
  *    Hint: What kinds of input are unacceptable? What kinds of
  *        acceptable input don't produce the correct answer?
  * 
@@ -68,5 +69,7 @@ public class Enigma1{
  added print statement for percent
  changed spacing of main method
  missing curly braces
+ tranferred mathematical equation from specific instances to general equation to calculate all inputs
+ rounded to two decimal points by multiplying by 100 and dividing by 100.0
  * 
  */
