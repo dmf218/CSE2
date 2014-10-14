@@ -33,7 +33,7 @@ public class Roulette   {
                 
                 //go up til 37, make if statement
                 //note: you want up to #36 but 00=37
-                while (k<1000)   {
+                while (k<1000)   {  //run the program for a speified 1000 times (running 100 loop that long)
                     
                   
                     while (n<100)  {
@@ -43,22 +43,23 @@ public class Roulette   {
                         if (chosen==spin)   {
                             z=z+1;
                         }
-                        n++;  //counter
+                        n++;  //counter- add one
                     }   //end of 100 while
                      profit$=(z*36); //count total profit
                          
                       if (profit$ > 100) {
-                          profitCount++;
+                          profitCount++;    //count the number of times you make a profit
                       }
                         
                     else if (z==0)    {
                             losses=losses+1;    //count number of times you lose everything in 100 loop
                             totalLosses++;
                     }
-                    z=0;
+                    z=0;    //reset variable to 0
+                    n=0;    //reset 100 loop counter
                     
-                  k=k+1;  //add one to the counter
-                }   //1000 while       
+                  k=k+1;  //add one to the counter that stops the 1000 while loop
+                }   //end of 1000 while       
                     System.out.println("You lost everything "+totalLosses+" times.");    //print out number of complete losses
                     System.out.println("You made a profit "+profitCount+" times.");  //print out number of times you gain a profitCount
                     System.out.println("You made a total profit of $"+profitCount*36); //print total profit
