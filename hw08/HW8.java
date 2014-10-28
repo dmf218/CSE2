@@ -57,7 +57,7 @@ public class HW8{
   public static char getInput(Scanner myScanner, String letters, int limitFive) {   //2nd method
       //limitFive is set equal to five
       myScanner=new Scanner(System.in); //scanner instance
-      int a=0;    //make this a counter
+      //int a=0;    //make this a counter
       letters=myScanner.next(); //accept the user input
       char x=letters.charAt(0); //check the first letter of the string
       if (!(letters.length()==1))   {   //if length is greater than 1
@@ -66,19 +66,18 @@ public class HW8{
           return x; //return this to the main method 
       }
       else {    //if length is 
-          while (a<=limitFive){
+          while (limitFive>=1){
               //a=0;  //initialize a 
-              a++;  //increment a
               if (x=='Y' || x=='y' || x=='N' || x=='n') {   //check if input is one of these 
                   return x; //return this to the main method
               }
-              if (a==5) {
+              if (limitFive==1) {
                   System.out.println("You failed after 5 tries.");
-                  break;
+                  break;    //break out of the loop after 5 tries
               }
               else { //if what entered is not one of the above
                   System.out.print("You did not enter a character from the list 'yYnN'; try again- ");  //error message, prompt user to enter another
-                  //a++;
+                  limitFive--;  //decrement so that loop will stop after 5 tries
                   x=getInput(myScanner, letters, limitFive);    //run the method again
                   return x; //return this to main method
               }
