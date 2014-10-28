@@ -91,19 +91,6 @@ public class HW8{
   public static char getInput(Scanner myScanner, String str, String digits) {   //third method
     myScanner=new Scanner(System.in);   //scanner instance
    
-    //digits=myScanner.next();    //accept the user input
-    /*char c0=digits.charAt(0);    //check the first digit of the string
-    char c1=digits.charAt(1);   //check to see if it is 2
-    char c2=digits.charAt(2);   //chack so on
-    char c3=digits.charAt(3);
-    char c4=digits.charAt(4);
-    char c5=digits.charAt(5);
-    char c6=digits.charAt(6);
-    char c7=digits.charAt(7);
-    char c8=digits.charAt(8);
-    char c9=digits.charAt(9);
-    */
-    //while (true)    {
         System.out.println(str);
         System.out.print("Enter one of:'0','1','2','3','4','5','6','7','8','9'- "); //prompt the user to enter a digit
         digits=myScanner.next();
@@ -114,38 +101,6 @@ public class HW8{
         first=getInput(myScanner, str, digits);  //run the third method again
         return first;   //return this value
     }
-    /*char x1=digits.charAt(0);
-    if (x1==c0) {   //check to see if what was inputed by the user is equal to c0(0)
-        return c0;  //return such value
-    }
-    else if (x1==c1)    {   //check to see if what is inputed is equal to c1 (1) 
-        return c1;
-    }
-    else if (x1==c2)    {   //same as above but tests next c#
-        return c2;
-    }
-    else if (x1==c3)    {
-        return c3;
-    }
-    else if (x1==c4)    {
-        return c4;
-    }
-    else if (x1==c5)    {
-        return c5;
-    }
-    else if (x1==c6)    {
-        return c6;
-    }
-    else if (x1==c7)    {
-        return c7;
-    }
-    else if (x1==c8)    {
-        return c8;
-    }
-    else if (x1==c9)    {
-        return c9;
-    }
-    */
     else {
         if (first=='0' || first=='1' || first=='2' || first=='3' || first=='4' || first=='5' || first=='6' || first=='7' || first=='8' || first=='9')   {
             return first;   //return this value
@@ -156,7 +111,6 @@ public class HW8{
             return first;   //retrun the value
         }
    }
-  //}
   } //end of 3rd method
   
   
