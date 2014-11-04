@@ -3,7 +3,7 @@
 //CSE 02
 //October 31, 2014
 //Blocked Again Program
-        //use additional methods to accomplish the task of printing out increented blocks
+        //use additional methods to accomplish the task of printing out incremented blocks
 /*
    1
    -
@@ -20,9 +20,6 @@
 4444444
 -------
 */
-//allBlocks print out 
-//block (first) printout/ everything else
-//spaces in the line and number of times printed out on the same row
 
 import java.util.Scanner;
 public class BlockedAgain{
@@ -82,31 +79,27 @@ public class BlockedAgain{
                         System.out.print(" ");  //print out spaces
                     }
                     for (int n=1; n<i; n++){
-                    if (!(i==1)){   //when it is the first number (only print one 1)
-                        for (int k=0; k<(2*i-1); k++) {     //second digit line
-                        System.out.print(i);    //print all i on one line
+                        if (!(i==1)){   //when it is the first number (only print one 1)
+                            for (int k=0; k<(2*i-1); k++) {     //second digit line
+                                System.out.print(i);    //print all i on one line
+                            }
+                            System.out.println();   //go to next line
+                            for (int s=0; s < (number - (i-1)); s++) {
+                                System.out.print(" ");  //print out soaces
+                            }
+                        }
                     }
-                    System.out.println();   //go to next line
-                    for (int s=0; s < (number - (i-1)); s++) {
-                        System.out.print(" ");  //print out soaces
+                    for (int d=0; d<(2*i-1); d++)   {   //controls the amount of dashes
+                        String dashes=line();   //call the method line
                     }
-                    
-                    }
-                    }
-                    for (int d=0; d<(2*i-1); d++)   {   
-                        System.out.print("-");  //print number dashes in same format 
-                    }
-                    System.out.println();
+                    System.out.println();   //go to next line  
                 }   //end of overarching for loop
     }   //end of block method
     
-    public static void line(int number) {
-        for (int i=1; i<=number; i++)   {
-          for (int d=0; d<(2*i-1); d++)   {   
-            System.out.print("-");  //print number dashes in same format 
-          }
-        System.out.println();   //go to next line  
-        }
+    public static String line() {
+        String hyphen="-";  //make a dash a string variable
+        System.out.print(hyphen);  //print number dashes in same format 
+        return hyphen;  //return to the previous method
     }
     
     
