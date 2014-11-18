@@ -94,17 +94,7 @@ public class PokerOdds{
         for (int i=0; i<deck.length; i++)   {   //assign the spots in deck array with sequential numbers
             deck[i]=i;  //set element equal to number in the loop
         }
-        //shuffle deck
-        /*for (int j=0; j<deck.length; j++)   {   //this loop shuffles the cards
-            //generate the index randomly
-            int element= (int)(Math.random()*deck.length);  //generate random number between 0 and 52, not including 52 (which is ok)
-                //represents the specific index of the array
-            int temp= deck[j];  //creating temporary variable to store number for future use
-            deck[j]=deck[element];  //set the original array equal to the same array but with different index
-            deck[element]=temp;
-            //effectively shuffle the deck
-        }
-        */
+        
         int counter=0;  //initialize counter to 0
         int notPair=0;  //counter for those that are not pairs
         String samePairRank=" ";    //create variable to store the rank that is duplicated
