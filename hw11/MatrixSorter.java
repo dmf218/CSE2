@@ -23,9 +23,12 @@ public class MatrixSorter{
    }    //end of main method
    
    public static int[][][] buildMat3d ()    {
-       int [][][] matrix= new int[3][7][9];    //declare and allocate array containign five arrays
+       int [][][] matrix= new int[3][0][0];    //declare and allocate array containign five arrays
+       
        for (int i=0; i<matrix.length; i++)  {
+           matrix[i]=new int [i*2+3][];
            for (int j=0; j<i*2+3; j++ ){
+               matrix[i][j]=new int [i+j+1];
              for (int k=0; k<i+j+1; k++)  {
              matrix[i][j][k] = (int)(Math.random()*99+1);  //fill with random numbers from 0 to 99
        
@@ -40,8 +43,8 @@ public class MatrixSorter{
    public static void show(int [][][] matrix)   {
        for(int i=0; i<3; i++)  { 
            System.out.println("---------------------------Slab "+ (i+1));   //will change to 1, 2, and 3
-            for(int j=0; j<i*2+3; j++)  {   //loop through that array length
-                for (int k=0; k<i+j+1; k++)   { //loop through that array length
+            for(int j=0; j<matrix[i].length; j++)  {   //loop through that array length
+                for (int k=0; k<matrix[i][j].length; k++)   { //loop through that array length
                 System.out.print(matrix[i][j][k]+"  "); //print out individual elements
                 }
                 System.out.println();
@@ -50,7 +53,6 @@ public class MatrixSorter{
         }
         System.out.println("---------------------------");
    }
-   
    //method that finds the min value
    public static int findMin(int [][][] matrix) {
        int min=matrix[0][0][0];  //set min as the first value
@@ -66,37 +68,35 @@ public class MatrixSorter{
        return min;
    }    //end of findMin method
    
-   
-    //first method to sort the members of the array
-   //from main method
-   //public static void sort (int[][] array)  {
-       
-       
-   //}
-  
    //sorting arrays
     public static void sort(int[][] list) {
-        for (int i=0; i<list.length-1; i++) {
-            for (int b=0; b<list[i].length-1; b++)  {
-            //find the minimum in the list [i... list.length-1]
-            int currentMin= list[i][b];
-            int currentMinIndex=i;
-            
-            for (int j=i+1; j<list.length; j++) {
-                if (currentMin>list[i][j]) {
-                    currentMin=list[i][j];
-                    currentMinIndex=j;
-                }
-            }
-            
-            //swap list[i] with list[currentMinIndex] if necessary
-            if (currentMinIndex != b)   {
-                list[currentMinIndex]=list[i];
-                list[i][b]= currentMin;
-            }
+     //loop through all the elements in array   
+     //this part sorts the rows
+        for (int i=0; i<3; i++)  {
+               for (int j=0; j<i*2+3; j++ ){
+                 for (int k=0; k<i+j+1; k++)  {
+                     for(int z=k+1; z<i+j+1; z++) {   //to check the next element as well
+                        if (list[j][z]<list[j][k]) {    
+                            int temp= list[j][k];
+                            list[j][k]=list[j][z];
+                            list[j][z]=temp;
+                         }
+                     }
+                 }
+               }
         }
+        //the following sorts the matrix by columns
+       for (int q=1; q<list.length; q++)   {
+             int [] temp=list[q];
+             int x=list[q][0];
+             int row=q;
+             while(row>0 && list[row-1][0]>x)   {
+                list[row]=list[row-1];
+                row--;
+            }
+            list[row]=temp;
         }
-    }
+    }   //end of sort array
     
    
    
