@@ -7,7 +7,7 @@
         //first slab has three rows, the second slab five rows, and the third slab seven rows
     //matrix should be initialized with random numbers from 1 to 99 inclusive
     //show should print out all array elements
-import java.util.Arrays;
+
 public class MatrixSorter{
 
   public static void main(String arg[]){
@@ -35,7 +35,7 @@ public class MatrixSorter{
              }
            }
         }
-        return matrix;
+        return matrix;  //retrun to the main method
      
    }
    
@@ -65,21 +65,22 @@ public class MatrixSorter{
                 }
             }
        }
-       return min;
+       return min;  //etrun this value
    }    //end of findMin method
    
    //sorting arrays
     public static void sort(int[][] list) {
      //loop through all the elements in array   
      //this part sorts the rows
+     //loops through entire array 'list'
         for (int i=0; i<3; i++)  {
                for (int j=0; j<i*2+3; j++ ){
                  for (int k=0; k<i+j+1; k++)  {
                      for(int z=k+1; z<i+j+1; z++) {   //to check the next element as well
                         if (list[j][z]<list[j][k]) {    
-                            int temp= list[j][k];
-                            list[j][k]=list[j][z];
-                            list[j][z]=temp;
+                            int temp= list[j][k];   //create temporary variable that stores element value
+                            list[j][k]=list[j][z];  //switch values
+                            list[j][z]=temp;    //set that thing to temp again so the value is correctly stored
                          }
                      }
                  }
@@ -87,14 +88,14 @@ public class MatrixSorter{
         }
         //the following sorts the matrix by columns
        for (int q=1; q<list.length; q++)   {
-             int [] temp=list[q];
-             int x=list[q][0];
-             int row=q;
+             int [] temp=list[q];   //create temp array value
+             int x=list[q][0];  //iniialize variable
+             int row=q; //initialize varibale
              while(row>0 && list[row-1][0]>x)   {
-                list[row]=list[row-1];
-                row--;
+                list[row]=list[row-1];  //reset element value
+                row--;  //counter that controls the while loop
             }
-            list[row]=temp;
+            list[row]=temp; //replace value
         }
     }   //end of sort array
     
